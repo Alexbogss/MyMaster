@@ -1,0 +1,163 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="\Content\css\default.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="\Content\css\fonts.css" rel="stylesheet" type="text/css" media="all" />
+
+</head>
+<body>
+    <div id="header" class="container">
+        <div id="logo">
+            <h1><a href="index.html">Мой Мастер</a></h1>
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="/Index/Index" accesskey="1" title="">Клиентам</a></li>
+                <li class="active"><a href="#" accesskey="3" title="">Мастерам</a></li>
+                <li><a href="/Entrance/Index" accesskey="4" title="">Вход</a></li>
+                <li><a href="/Registration/Index" accesskey="5" title="">Регистрация</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="banner"></div>
+    <div style="background-color:WhiteSmoke; border: 1px solid #d6d7d8;">
+        <section id="page" class="container">
+
+            <h2>Этапы регистрации</h2>
+
+            <div class="boxA">
+                <div class="box">
+                    <img src="~/Content/images/reason_1.png" width="42" height="49">
+                    <p><b>Заполните резюме</b>,<br> ответьте на контрольные вопросы<br>и загрузите копии документов.<br>В среднем 10–15 минут.</p>
+                </div>
+            </div>
+            <div class="boxB">
+                <div class="box">
+                    <img src="~/Content/images/reason_2.png" width="42" height="42">
+                    <p><b>Выберите время</b>,<br>удобное для приёма клинетов.</p>
+                </div>
+            </div>
+            <div class="boxC">
+                <div class="box">
+                    <img src="~/Content/images/reason_3.png" width="42" height="42">
+                    <p><b>Ваша анкета на сайте!</b><br>Заполните портфолио и ждите отклика клиентов.</p>
+                </div>
+            </div>
+    </div>
+    </section>
+    </div>
+
+    <div class='field'>
+        <form method='post' class='reg-form'>
+            <h3>Личные данные</h3>
+            <div class='form-row'>
+                <label for='form_fname'>Имя: </label>
+                <input type='text' id='form_fname' name='first_name'>
+            </div>
+
+            <div class='form-row'>
+                <label for='form_sname'>Фамилия: </label>
+                <input type='text' id='form_sname' name='second_name'>
+            </div>
+
+            <div class='form-row'>
+                <label for='form_gender'>Пол: </label>
+                <select type='text' id='form_gender' name='gender'>
+                    <option selected disabled>Выберите ваш пол</option>
+                    <option value="М">Мужской</option>
+                    <option value="Ж">Женский</option>
+                </select>
+            </div>
+
+            <div class='form-row'>
+                <label for='form_email'>Email: </label>
+                <input type='email' id='form_email' name='email'>
+            </div>
+
+            <div class='form-row'>
+                <label for='form_phone'>Телефон: </label>
+                <input type="text" id="form_phone" name='phone' placeholder="+7 (9__) ___-__-__">
+            </div>
+
+            <div class='form-row'>
+                <label for='form_about'>О себе: </label>
+                <textarea id='form_about' name='about'></textarea>
+            </div>
+            <div class='field-line'></div>
+            <h3>Профессиональные данные</h3>
+            <div class='form-row'>
+                <label for='form_edu'>Профильное образование:</label>
+                <input type='text' id='Spec_edu' name='Spec_edu'>
+            </div>
+
+            <div class='form-row'>
+                <label for='form_exp'>Опыт работы по специальности: </label>
+                <input type='text' id='Work_Exp' name='Work_Exp'>
+            </div>
+
+            <div class='form-row'>
+                <label for='form_diplomas'>Дипломы, награды и т.п.:</label>
+                <input type='text' id='form_diplomas' name='Diplomas'>
+            </div>
+
+            <div class='form-row'>
+                <label for='form_areas'>Районы выезда (города, районы, ветки метро):</label>
+                <input type="text" id="form_areas" name='Working_areas'>
+            </div>
+
+            <div class='form-row'>
+                <label for='form_other'>Другая информация:</label>
+                <textarea id='form_other' name='other'></textarea>
+            </div>
+
+            <div class='field-line'></div>
+
+            <h3>Специальность:</h3>
+            <div class='form-row'>
+                <div class='form-min1'>
+                    <input type="checkbox" id="Hairdresser" name="Hairdresser" value="Hairdresser">Парикмахер<br>
+                </div>
+
+                <div class='form-min1'>
+                    <input type="checkbox" id="Manicure" name="Manicure" value="Manicure">Маникюр<br>
+                </div>
+
+                <div class='form-min2'>
+                    <input type="checkbox" id="Manicure" name="Manicure" value="Manicure">Макияж<br>
+                </div>
+            </div>
+
+            <div class='form-row'>
+                <div class='form-min1'>
+                    <input type="checkbox" id="Hairdresser" name="Hairdresser" value="Hairdresser">Косметолог<br>
+                </div>
+
+                <div class='form-min1'>
+                    <input type="checkbox" id="Manicure" name="Manicure" value="Manicure">Массажист<br>
+                </div>
+
+                <div class='form-min2'>
+                    <input type="checkbox" id="Manicure" name="Manicure" value="Manicure">Эпиляция<br>
+                </div>
+            </div>
+
+
+            <div class='field-line'></div>
+            <div class="form-row">
+                <input type="submit" value='Зарегистрироваться'>
+            </div>
+
+        </form>
+
+    </div>
+    <div id="copyright" class="container">
+        <p>МП-34<br>2018</p>
+    </div>
+</body>
+</html>

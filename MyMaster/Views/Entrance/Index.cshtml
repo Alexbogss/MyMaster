@@ -1,0 +1,53 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="\Content\css\default.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="\Content\css\fonts.css" rel="stylesheet" type="text/css" media="all" />
+
+</head>
+<body>
+    <div id="header" class="container">
+        <div id="logo">
+            <h1><a href="index.html">Мой Мастер</a></h1>
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="/Index/Index" accesskey="1" title="">Клиентам</a></li>
+                <li><a href="/Masters/Index" accesskey="3" title="">Мастерам</a></li>
+                <li class="active"><a class="active" " accesskey="4" title="">Вход</a></li>
+                <li><a href="/Registration/Index" accesskey="5" title="">Регистрация</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="banner"></div>
+    <div id="page" class="container">
+        <div class="field-log">
+            <h2>Вход</h2>
+            <form method='post' class='log-form'>
+                <div class="form-log">
+                    <label>Email</label>
+                    <input class="" type="email" name="email" placeholder="E-mail" value="" autofocus="" id="login-email">
+                </div>
+                <div class="form-log">
+                    <input type="password" name="password" placeholder="Пароль" id="login-password">
+                    <label for="login-password">Пароль</label>
+                </div>
+                <div class="form-log">
+                    <input type="submit" value='Войти'>
+            </form>
+        </div>
+    </div>
+
+    </div>
+    <div id="copyright" class="container">
+        <p>МП-34<br>2018</p>
+    </div>
+</body>
+</html>
