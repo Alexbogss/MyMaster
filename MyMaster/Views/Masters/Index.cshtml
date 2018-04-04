@@ -10,6 +10,100 @@
     <link href="\Content\css\default.css" rel="stylesheet" type="text/css" media="all" />
     <link href="\Content\css\fonts.css" rel="stylesheet" type="text/css" media="all" />
 
+    <script type="text/javascript" src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.validate.min.js"></script>
+    
+    <script>
+        $(document).ready(function () {
+            $("#regform").validate({
+
+                rules: {
+
+                    first_name: {
+                        required: true,
+                        minlength: 3,
+                        maxlength: 30,
+                    },
+
+                    second_name: {
+                        required: true,
+                        minlength: 3,
+                        maxlength: 30,
+                    },
+
+                    gender: {
+                        required: true,
+                    },
+
+                    email: {
+                        required: true,
+                        email: true,
+                    },
+
+                    pass1: {
+                        required: true,
+                        minlength: 6,
+                    },
+
+                    pass2: {
+                        required: true,
+                        minlength: 3,
+                        equalTo: "#pass1",
+                    },
+
+                    phone: {
+                        digits: true,
+                        rangelength: [10, 10],
+                    }
+
+                },
+
+                messages: {
+
+                    first_name: {
+                        required: "Обязательно введите имя!",
+                        minlength: "Имя содержит минимум 3 буквы!",
+                        maxlength: "Максимальная длина имени - 30 букв!",
+                    },
+
+                    second_name: {
+                        required: "Обязательно введите фамилию!",
+                        minlength: "Фамилия содержит минимум 3 буквы!",
+                        maxlength: "Максимальная длина фамилии - 30 букв!",
+                    },
+
+                    gender: {
+                        required: "Выберите свой пол!",
+                    },
+
+                    email: {
+                        required: "Обязательно введите email!",
+                        email: "Введите корректный email!",
+                    },
+
+                    pass1: {
+                        required: "Введите пароль!",
+                        minlength: "Пароль длиннее 6 символов!",
+                    },
+
+                    pass2: {
+                        required: "Введите пароль еще раз!",
+                        equalTo: "Пароли должны совпадать!",
+                        minlength: "Пароль длиннее 6 символов!",
+                    },
+
+                    phone: {
+                        digits: "Телефон состоит только из 10 цифр без кода!",
+                        rangelength: "Длина не соответствует!"
+                    }
+                }
+
+            });
+        });
+    </script>
+
+
+
 </head>
 <body>
     <div id="header" class="container">
@@ -49,15 +143,15 @@
                     <p><b>Ваша анкета на сайте!</b><br>Заполните портфолио и ждите отклика клиентов.</p>
                 </div>
             </div>
+        </section>
     </div>
-    </section>
-    </div>
+    
 
     <div class='field'>
-        <form method='post' class='reg-form'>
+        <form method='post' class='reg-form' id="regform">
             <h3>Личные данные</h3>
             <div class='form-row'>
-                <label for='form_fname'>Имя: </label>
+                <label for='form_fname' class="input-lable">Имя: </label>
                 <input type='text' id='form_fname' name='first_name'>
             </div>
 
@@ -81,8 +175,18 @@
             </div>
 
             <div class='form-row'>
+                <label for='form_password1'>Пароль:</label>
+                <input type="text" id="form_password1" name="pass1" />
+            </div>
+
+            <div class='form-row'>
+                <label for='form_password2'>Повторите пароль:</label>
+                <input type="text" id="form_password2" name="pass2" />
+            </div>
+
+            <div class='form-row'>
                 <label for='form_phone'>Телефон: </label>
-                <input type="text" id="form_phone" name='phone' placeholder="+7 (9__) ___-__-__">
+                <input type="text" id="form_phone" name='phone' placeholder="+7 (___) ___-__-__">
             </div>
 
             <div class='form-row'>
@@ -147,7 +251,6 @@
                 </div>
             </div>
 
-
             <div class='field-line'></div>
             <div class="form-row">
                 <input type="submit" value='Зарегистрироваться'>
@@ -159,5 +262,5 @@
     <div id="copyright" class="container">
         <p>МП-34<br>2018</p>
     </div>
+
 </body>
-</html>

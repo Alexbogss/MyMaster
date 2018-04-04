@@ -98,8 +98,15 @@
     <Content Include="Content\css\default.css" />
     <Content Include="Content\css\fonts.css" />
     <Content Include="Global.asax" />
-    <Content Include="Views\css\default.css" />
-    <Content Include="Views\css\fonts.css" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\mastervalidation.js" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\images\banner.jpg" />
     <Content Include="Content\images\bg.jpg" />
@@ -130,6 +137,7 @@
     <Compile Include="Models\Master.cs" />
     <Compile Include="Models\Service.cs" />
     <Compile Include="Models\Specialization.cs" />
+    <Compile Include="Models\Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -145,6 +153,8 @@
     <Content Include="Views\Registration\Index.cshtml" />
     <Content Include="Views\DemoInto\Index.cshtml" />
     <Content Include="Views\SelectionTable\Index.cshtml" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
